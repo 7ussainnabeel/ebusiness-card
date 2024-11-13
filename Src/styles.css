@@ -68,88 +68,6 @@ p {
 
 .social-links a {
     text-decoration: none;
-    padding: 10px;
-    display: inline-block;
-}
-
-/* Light Mode - Icon Color */
-@media (prefers-color-scheme: light) {
-    .social-links a {
-        color: #333; /* Dark text color for light mode */
-    }
-
-    .social-links a:hover {
-        color: #555; /* Darker hover color for light mode */
-    }
-
-    /* Specific social icon colors */
-    .social-links a i, .social-links a img {
-        filter: brightness(0) invert(1); /* Inverts icons to white for light mode */
-    }
-
-    .github {
-        color: #333; /* Dark color for the GitHub icon */
-    }
-
-    .linkedin {
-        color: #0077b5; /* LinkedIn's brand color */
-    }
-
-    .whatsapp {
-        color: #25d366; /* WhatsApp's brand color */
-    }
-
-    .instagram {
-        color: #e1306c; /* Instagram's brand color */
-    }
-
-    .discord {
-        color: #7289da; /* Discord's brand color */
-    }
-
-    .tiktok {
-        color: #000000; /* TikTok's brand color */
-    }
-}
-
-/* Dark Mode - Icon Color */
-@media (prefers-color-scheme: dark) {
-    .social-links a {
-        color: #f0f0f0; /* Light color for dark mode */
-    }
-
-    .social-links a:hover {
-        color: #bbb; /* Lighter hover color for dark mode */
-    }
-
-    /* Specific social icon colors */
-    .social-links a i, .social-links a img {
-        filter: brightness(0) invert(1); /* Inverts icons to dark color for dark mode */
-    }
-
-    .github {
-        color: #f0f0f0; /* Light color for GitHub icon */
-    }
-
-    .linkedin {
-        color: #0077b5; /* LinkedIn's brand color */
-    }
-
-    .whatsapp {
-        color: #25d366; /* WhatsApp's brand color */
-    }
-
-    .instagram {
-        color: #e1306c; /* Instagram's brand color */
-    }
-
-    .discord {
-        color: #7289da; /* Discord's brand color */
-    }
-
-    .tiktok {
-        color: #ffffff; /* TikTok's brand color */
-    }
 }
 
 /* Instagram Embed */
@@ -227,20 +145,6 @@ p {
     background-color: #e8f5e9;
 }
 
-/* Mobile View (to ensure share button is clickable) */
-@media (max-width: 768px) {
-    .share-button-container {
-        bottom: 20px; /* Make sure it's not too close to the bottom */
-        right: 10px;
-        z-index: 200; /* Ensure the button is on top */
-    }
-
-    .share-options {
-        display: block;
-        margin-top: 10px;
-    }
-}
-
 /* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
     body {
@@ -280,5 +184,52 @@ p {
 
     .share-button-container {
         background-color: #3e8e41;
+    }
+
+    .share-button-container:hover {
+        background-color: #4CAF50;
+    }
+    .social-links a i, .social-links a img {
+        filter: brightness(0) invert(1); /* Inverts icons to white for light mode */
+    }
+}
+
+
+@media (prefers-color-scheme: light) {
+    .social-links a {
+        color: #333; /* Dark text color for light mode */
+    }
+
+    .social-links a:hover {
+        color: #555; /* Darker hover color for light mode */
+    }
+
+    /* Specific social icon colors */
+    .social-links a i, .social-links a img {
+        filter: brightness(0) invert(0); /* Inverts icons to white for light mode */
+    }
+
+    .github {
+        color: #333; /* Dark color for the GitHub icon */
+    }
+
+    .linkedin {
+        color: #0077b5; /* LinkedIn's brand color */
+    }
+
+    .whatsapp {
+        color: #25d366; /* WhatsApp's brand color */
+    }
+
+    .instagram {
+        color: #e1306c; /* Instagram's brand color */
+    }
+
+    .discord {
+        color: #7289da; /* Discord's brand color */
+    }
+
+    .tiktok {
+        color: #000000; /* TikTok's brand color */
     }
 }
