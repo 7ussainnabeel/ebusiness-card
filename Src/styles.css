@@ -169,7 +169,30 @@ p {
         width: 100%;
     }
 }
+/* Media Query for Mobile View (Small Screens) */
+@media (max-width: 768px) {
+    .social-links {
+        flex-direction: row; /* Ensure icons are in a row on mobile */
+        justify-content: space-around; /* Space out icons evenly */
+    }
 
+    .social-links a {
+        width: 40px; /* Slightly bigger icons on mobile for better visibility */
+        height: 40px;
+    }
+}
+/* Media Query for Tablet and Larger Devices */
+@media (min-width: 769px) {
+    .social-links {
+        justify-content: center;
+        gap: 20px; /* Larger gap for wider screens */
+    }
+
+    .social-links a {
+        width: 50px; /* Larger icon size for larger screens */
+        height: 50px;
+    }
+}
 /* Basic Styles */
 .share-button-container {
     display: inline-block;
