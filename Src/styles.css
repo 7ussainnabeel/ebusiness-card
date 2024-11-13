@@ -227,6 +227,20 @@ p {
     background-color: #e8f5e9;
 }
 
+/* Mobile View (to ensure share button is clickable) */
+@media (max-width: 768px) {
+    .share-button-container {
+        bottom: 20px; /* Make sure it's not too close to the bottom */
+        right: 10px;
+        z-index: 200; /* Ensure the button is on top */
+    }
+
+    .share-options {
+        display: block;
+        margin-top: 10px;
+    }
+}
+
 /* Dark Mode Styles */
 @media (prefers-color-scheme: dark) {
     body {
@@ -267,8 +281,4 @@ p {
     .share-button-container {
         background-color: #3e8e41;
     }
-
-    /* .share-button-container:hover {
-        background-color: #4CAF50;
-    } */
 }
