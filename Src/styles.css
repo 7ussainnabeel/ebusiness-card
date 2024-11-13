@@ -68,6 +68,7 @@ p {
 
 .social-links a {
     text-decoration: none;
+    font-size: 18px;
 }
 
 /* Instagram Embed */
@@ -189,47 +190,57 @@ p {
     .share-button-container:hover {
         background-color: #4CAF50;
     }
-    .social-links a i, .social-links a img {
-        filter: brightness(0) invert(1); /* Inverts icons to white for light mode */
-    }
 }
 
+/* Responsive Styling */
+@media (max-width: 480px) {
+    .card-container {
+        padding: 15px;
+        max-width: 90%;
+    }
 
-@media (prefers-color-scheme: light) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .contact-info h3 {
+        font-size: 16px;
+    }
+
+    .profile-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .social-links a {
-        color: #333; /* Dark text color for light mode */
+        font-size: 16px;
     }
 
-    .social-links a:hover {
-        color: #555; /* Darker hover color for light mode */
+    .share-button-container {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
     }
 
-    /* Specific social icon colors */
-    .social-links a i, .social-links a img {
-        filter: brightness(0) invert(0); /* Inverts icons to white for light mode */
+    .share-button-container .share-icon {
+        font-size: 24px;
     }
 
-    .github {
-        color: #333; /* Dark color for the GitHub icon */
+    .share-options {
+        position: absolute;
+        bottom: 60px;
+        right: 0;
+        width: 150px;
     }
 
-    .linkedin {
-        color: #0077b5; /* LinkedIn's brand color */
-    }
-
-    .whatsapp {
-        color: #25d366; /* WhatsApp's brand color */
-    }
-
-    .instagram {
-        color: #e1306c; /* Instagram's brand color */
-    }
-
-    .discord {
-        color: #7289da; /* Discord's brand color */
-    }
-
-    .tiktok {
-        color: #000000; /* TikTok's brand color */
+    .share-option {
+        padding: 8px;
+        font-size: 14px;
     }
 }
