@@ -187,39 +187,38 @@ p {
 
 /* Instagram Embed Styles */
 .instagram-embed {
-    background: #FFF;
+    background: #121212;
     border: 0;
     border-radius: 3px;
     box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15);
     margin: auto;  /* Auto margins for horizontal centering */
-    max-width: 540px;
+    max-width: 768px;
     min-width: 326px;
     padding: 0;
-    width: 100%;
+    width: 99.375%;
     width: -webkit-calc(100% - 2px);
     width: calc(100% - 2px);
+    display: inline-grid; /* Enable flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
 }
 
 .instagram-embed h3 {
     padding: 16px;
     text-align: center;
     font-family: Arial, sans-serif;
-    color: #333;
-    margin: auto;
+    color: #fff;
 }
 
 .instagram-embed a {
-    background: #FFFFFF;
+    background: #1e1e1e;
     line-height: 0;
     padding: 0;
     text-align: center;
     text-decoration: none;
     width: 100%;
     display: inline-block;
-    margin: auto;
 }
-
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
