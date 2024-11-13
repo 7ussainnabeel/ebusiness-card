@@ -8,17 +8,23 @@
 /* Body and Global Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
 }
 
+h1 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 14px;
+}
+
+/* Card Container */
 .card-container {
     max-width: 350px;
-    width: 90%; /* Allows card to adjust within mobile screen */
+    width: 100%;
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
@@ -37,28 +43,15 @@ body {
     margin-bottom: 10px;
 }
 
-h1 {
-    font-size: 24px;
-    color: #333;
-}
-
-p {
-    color: #777;
-    font-size: 14px;
-    text-align: center;
-}
-
 .contact-info h3 {
     font-size: 18px;
     margin-bottom: 10px;
     color: #333;
-    text-align: center;
 }
 
 .contact-info ul {
     list-style: none;
     padding: 0;
-    text-align: center;
 }
 
 .contact-info li {
@@ -68,30 +61,47 @@ p {
 /* Social Links */
 .social-links {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+    justify-content: space-around;
     margin-top: 20px;
 }
 
-.social-links a {
+.social-icon {
     text-decoration: none;
-    font-size: 18px;
+    padding: 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    text-align: center;
 }
 
-.social-links a img {
-    width: 24px;
-    height: 24px;
+.github {
+    background-color: #333;
 }
 
-/* Instagram Embed */
-.instagram-embed iframe {
-    margin-top: 20px;
-    width: 100%;
-    border-radius: 10px;
+.linkedin {
+    background-color: #0077b5;
 }
 
-/* VCF Download */
+.whatsapp {
+    background-color: #25d366;
+}
+
+.instagram {
+    background-color: #e1306c;
+}
+
+.twitter {
+    background-color: #1da1f2;
+}
+
+.tiktok {
+    background-color: #000;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+/* VCF Download Link */
 .vcf-link {
     display: block;
     text-align: center;
@@ -107,18 +117,29 @@ p {
     background-color: #555;
 }
 
-/* Share Button */
+/* Share Button Container */
 .share-button-container {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
     text-align: center;
     background-color: #4CAF50;
-    border-radius: 8px;
-    padding: 10px;
+    border-radius: 50%;
+    padding: 15px;
     cursor: pointer;
+    font-family: Arial, sans-serif;
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 20px;
+    right: 20px;
     z-index: 100;
+}
+
+.share-button-container:active .share-options,
+.share-button-container:hover .share-options {
+    display: block;
+    transition: 20s;
 }
 
 .share-button-container:hover {
@@ -128,15 +149,19 @@ p {
 .share-button-container .share-icon {
     font-size: 30px;
     color: #fff;
+    margin: 0;
 }
 
 .share-options {
     display: none;
     margin-top: 10px;
-}
-
-.share-button-container:hover .share-options {
-    display: block;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .share-option {
@@ -155,102 +180,148 @@ p {
     background-color: #e8f5e9;
 }
 
-/* Responsive Styling */
+.share-option img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* Instagram Embed */
+.instagram-embed iframe {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .card-container {
-        padding: 15px;
         max-width: 90%;
     }
 
-    h1 {
-        font-size: 22px;
+    .social-links {
+        flex-direction: row;
+        justify-content: space-around;
     }
 
-    .profile-img {
-        width: 80px;
-        height: 80px;
+    .social-links a {
+        width: 40px;
+        height: 40px;
     }
 
-    .contact-info h3, .contact-info li {
-        font-size: 16px;
-    }
-
-    /* Adjust Instagram iframe on smaller screens */
     .instagram-embed iframe {
         width: 100%;
-        height: 300px;
-    }
-
-    .share-button-container {
-        bottom: 15px;
-        right: 15px;
-        width: 50px;
-        height: 50px;
-    }
-
-    .share-button-container .share-icon {
-        font-size: 24px;
-    }
-
-    .share-options {
-        width: 150px;
-        bottom: 60px;
-    }
-
-    .share-option {
-        padding: 8px;
-        font-size: 14px;
-    }
-    .social-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .social-links a img {
-        width: 24px; /* Adjust size for tablet view */
-        height: 24px;
     }
 }
 
-@media (max-width: 480px) {
-    .card-container {
-        max-width: 95%;
-    }
-
-    h1 {
-        font-size: 20px;
-    }
+@media (min-width: 769px) {
     .social-links {
-        flex-direction: column; /* Stack social media links vertically */
-        align-items: center;
-        gap: 8px;
-        margin-top: 15px;
+        justify-content: center;
+        gap: 20px;
     }
 
-    .social-links a img {
-        width: 20px; /* Adjust size for mobile view */
-        height: 20px;
+    .social-links a {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #afafaf;
+        color: #ddd;
     }
 
-    .profile-img {
-        width: 70px;
-        height: 70px;
+    .card-container {
+        background-color: #d5d4d4;
+        color: #000000;
+        box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
     }
 
-    .contact-info h3, .contact-info li {
-        font-size: 15px;
+    h1,
+    .contact-info h3,
+    .vcf-link {
+        color: #000000;
     }
 
-    .instagram-embed iframe {
-        height: 250px;
+    .social-icon,
+    .vcf-link {
+        color: #fdfbfb;
     }
 
-    .share-options {
-        width: 140px;
+    .vcf-link {
+        background-color: #333;
+    }
+
+    .vcf-link:hover {
+        background-color: #555;
+    }
+
+    .share-button-container {
+        background-color: #4CAF50;
+    }
+
+    .share-button-container:hover {
+        background-color: #45a049;
     }
 
     .share-option {
-        font-size: 13px;
+        background-color: #1e1e1e;
+        color: #4CAF50;
+    }
+
+    .share-option:hover {
+        background-color: #333;
+    }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #ddd;
+    }
+
+    .card-container {
+        background-color: #1e1e1e;
+        color: #ddd;
+        box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+    }
+
+    h1,
+    .contact-info h3,
+    .vcf-link {
+        color: #ddd;
+    }
+
+    .social-icon,
+    .vcf-link {
+        color: #fff;
+    }
+
+    .vcf-link {
+        background-color: #333;
+    }
+
+    .vcf-link:hover {
+        background-color: #555;
+    }
+
+    .share-button-container {
+        background-color: #4CAF50;
+    }
+
+    .share-button-container:hover {
+        background-color: #45a049;
+    }
+
+    .share-option {
+        background-color: #1e1e1e;
+        color: #4CAF50;
+    }
+
+    .share-option:hover {
+        background-color: #333;
     }
 }
