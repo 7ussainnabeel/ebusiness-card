@@ -25,9 +25,9 @@ p {
 .card-container {
     max-width: 350px;
     width: 100%;
-    margin: 20px auto;
+    margin: 1px auto;
     background-color: #fff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -185,13 +185,41 @@ p {
     margin-right: 10px;
 }
 
-/* Instagram Embed */
-.instagram-embed iframe {
-    margin-top: 20px;
+/* Instagram Embed Styles */
+.instagram-embed {
+    background: #FFF;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 10px 0 rgba(0, 0, 0, 0.15);
+    margin: auto;  /* Auto margins for horizontal centering */
+    max-width: 540px;
+    min-width: 326px;
+    padding: 0;
     width: 100%;
-    max-width: 100%;
-    border-radius: 10px;
+    width: -webkit-calc(100% - 2px);
+    width: calc(100% - 2px);
 }
+
+.instagram-embed h3 {
+    padding: 16px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: auto;
+}
+
+.instagram-embed a {
+    background: #FFFFFF;
+    line-height: 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    display: inline-block;
+    margin: auto;
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -209,7 +237,7 @@ p {
         height: 40px;
     }
 
-    .instagram-embed iframe {
+    .instagram-embed {
         width: 100%;
     }
 }
@@ -305,7 +333,7 @@ p {
     }
 
     .vcf-link:hover {
-        background-color: #555;
+        background-color: #f1efef;
     }
 
     .share-button-container {
@@ -324,4 +352,7 @@ p {
     .share-option:hover {
         background-color: #333;
     }
+    .social-links img{
+        filter: brightness(0) invert(1); /* Inverts icons to white for light mode */
+        }
 }
